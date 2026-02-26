@@ -6,7 +6,7 @@ from pygame.locals import *
 pygame.init()
 screen = display.set_mode()
 display.set_caption("Capstone 2")
-myFont = font.SysFont('arial', 12)  # Choose a font to use in game
+myFont = font.SysFont('arial', 15)  # Choose a font to use in game
 
 # Directions displayed throughout game
 directions = "Please press the 'Y' key for yes and the 'N' key for no."
@@ -36,7 +36,7 @@ def intro():
     intro3 = "One day, late at night, she hears a loud noise outside the village."
     q1 = "Should she go outside to investigate? Yes or no?"
 
-    screen.fill("white")
+    screen.fill("yellow")
     textSurface = myFont.render(intro1, True, "black")
     screen.blit(textSurface, (10, 10))
     textSurface = myFont.render(intro2, True, "black")
@@ -55,7 +55,8 @@ def question1(answer):
         yes1 = "She ventures into the dark, prepared for danger."
         yes2 = "Eventually, she sees an army of ogres coming toward her village!"
         q2 = "Should she fight the ogres? Yes or no?"
-
+        
+        screen.fill("yellow")
         textSurface = myFont.render(yes1, True, "black")
         screen.blit(textSurface, (10, 10))
         textSurface = myFont.render(yes2, True, "black")
@@ -71,7 +72,8 @@ def question1(answer):
         no3 = "She can tell something is very wrong..."
         no4 = "Eventually, she sees an army of ogres coming toward her village!"
         q2 = "Should she fight the ogres? Yes or no?"
-
+        
+        screen.fill("yellow")
         textSurface = myFont.render(no1, True, "black")
         screen.blit(textSurface, (10, 10))
         textSurface = myFont.render(no2, True, "black")
